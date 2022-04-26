@@ -9,6 +9,13 @@ resource "aws_vpc" "primary" {
   cidr_block           = "10.0.0.0/24"
   enable_dns_hostnames = true
   enable_dns_support   = true
+  
+  tags = {
+    name = "test-EC2"
+    owner = "name_here"
+    expire-on = "expiry_date"
+    purpose = "training"
+  }  
 }
 
 //Create IGW
@@ -36,6 +43,13 @@ resource "aws_subnet" "primary-az1" {
   cidr_block              = "10.0.0.0/24"
   map_public_ip_on_launch = true
   availability_zone       = "${var.aws_region}a"
+  
+  tags = {
+    name = "test-EC2"
+    owner = "name_here"
+    expire-on = "expiry_date"
+    purpose = "training"
+  }  
 }
 
 //Subnet-B
@@ -69,6 +83,12 @@ resource "aws_security_group" "primary_default" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  tags = {
+    name = "test-EC2"
+    owner = "name_here"
+    expire-on = "expiry_date"
+    purpose = "training"
+  }  
 }
 
 resource "aws_vpc_peering_connection_accepter" "peer" {
