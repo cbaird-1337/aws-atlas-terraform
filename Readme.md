@@ -42,8 +42,9 @@ This project currently does the below deployments:
 
 - MongoDB cluster - M10
 - MongoDB User (Pass the values when asked)
-- AWS Custom VPC, Internet Gateway, Route Tables, Subnets with Public and Private access
+- AWS Custom VPC, Internet Gateway, Route Tables, Subnets with Public and Private access and appropriate resource tags
 - AWS-MongoDB Atlas VPC Peering
+- An optional (commented out) script to deploy an EC2 instance
 
 **3\. Execute the Terraform apply.**
 
