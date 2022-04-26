@@ -1,3 +1,10 @@
+data "aws_vpc" "primary" {
+
+  filter {
+    name = "tag:${local.env_profile}-vpc"
+    values = ["${local.env_profile}-vpc"]
+  }
+
 resource "aws_instance" "instance" {
   ami                         = "ami-0c02fb55956c7d316"
   availability_zone           = "${var.aws_region}a"
