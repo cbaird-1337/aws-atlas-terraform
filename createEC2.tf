@@ -6,8 +6,8 @@ resource "aws_instance" "instance" {
   
   tags = {
     name = "test-EC2"
-    owner = "cbaird"
-    expire-on = "2022-05-10"
+    owner = "name_here"
+    expire-on = "expiry_date"
     purpose = "training"
     
   }
