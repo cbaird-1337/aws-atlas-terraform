@@ -1,6 +1,6 @@
-# Example - AWS and Atlas together with Terraform
+# Deploying AWS and MongoDB Atlas Resources with Terraform
 
-This project aims to provide a very straight-forward example of using AWS and MongoDB Atlas together.
+This script provides a simple example of deploying infrastructure as code using Terraform.
 
 
 ## Dependencies
